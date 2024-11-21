@@ -1,0 +1,14 @@
+numpy
+pandas
+beautifulsoup4
+requests
+pillow
+matplotlib
+pytz
+geopy
+tqdm
+lxml
+convertbng
+simplekml
+scikit-image
+pyproj
