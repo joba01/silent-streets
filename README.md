@@ -9,6 +9,7 @@ Besides aquiring the data the project also helped me structure and weight the di
 
 This project is about creating a map of a region with different layers of information. How the features are weighted is subjective and can be adjusted to the needs of the user in the provided jupyter notebooks.
 
+Here is theblazesz version with regional data of Austria.
 The map and all feature layers can be explored in the created HTML file.
 
 ## Use of Map
@@ -33,15 +34,14 @@ Every Layer visualizes one or more features.
 
 Go to the Release section of this repository and download a calulated map of features of Styria, Austria.
 
-### Image 1: Density of Houses
+### Example 1: Density of Houses
 ![Density of Houses](img/density_houses_region2.png)
 
-### Image 2: Map of positive and negative features
+### Example 2: Map of positive and negative features
 ![Availability of Schools](img/positive_negative_features.png)
 
-### Example Availability of different Supermarkets
+### Example 3: Availability of different Supermarkets
 ![Public Transport Stations](img/supermarket_choices.png)
-
 
 
 ## Installation
@@ -62,7 +62,7 @@ This notebook downloads the data from OpenStreetMap, Wikipedia and other sources
 
 The main source is OSM.
 
-Data is cached in the configured ```data``` folder.`
+Data is cached in the configured ```data``` folder.
 
 For OSM the Overpass API is used to download POIs and stores them in CSV files.
 
@@ -83,6 +83,13 @@ Features are stored in the ````data/cache``` folder and images of layers are sto
 Images are stored in PNG and WebP format, the WebP format is used (by default) in the HTML file because of the higher compression and the support of non-lossless compression.
 
 Large datasets, e.g. houses, are split in smaller parts by covering the region with a grid and download the data for each grid cell.
+
+The main class Rastarize helps with the organization and conversion of the data.
+
+Rastaruze also supports the configuration of cell sizes, defining how detailed thebmaps are calculated, currently the cells are 50x50 meters.
+More and smaller cells also means longer computation.
+The houses dataset already has a much faster algorithm for applying the kernel function of the feature. Bynusing that on all featur maps, smaller cells and larger maps shoudn't be a problem.
+If this is not enougth GPU acceleration like Nvidia rapids should give a large performance boost.
 
 ### Notebook 03_create_html.ipynb
 
