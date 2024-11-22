@@ -87,3 +87,8 @@ Large datasets, e.g. houses, are split in smaller parts by covering the region w
 ### Notebook 03_create_html.ipynb
 
 This notebook creates the HTML file with the layers of the map. The notebook uses the folium library.
+
+
+## Used Data/Licences
+
+Shools in Styria/Austria Datasource: CC-BY-4.0: Land Steiermark - data.steiermark.gv.at
